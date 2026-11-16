@@ -35,9 +35,9 @@
     entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  }, { threshold: 0.01, rootMargin: "0px 0px 8% 0px" });
   document.querySelectorAll(".reveal").forEach((el, i) => {
-    el.style.transitionDelay = `${(i % 4) * 90}ms`;
+    el.style.transitionDelay = `${(i % 3) * 60}ms`;
     io.observe(el);
   });
 
@@ -54,7 +54,7 @@
   if (finePointer && !reduced) {
     document.querySelectorAll("[data-tilt]").forEach((el) => {
       const target = el.classList.contains("body3d") ? el.querySelector(".body3d__card") : el;
-      const max = el.classList.contains("orb") ? 18 : 10;
+      const max = el.classList.contains("orb") ? 8 : 7;
       el.addEventListener("pointermove", (e) => {
         const r = el.getBoundingClientRect();
         const px = (e.clientX - r.left) / r.width;
@@ -72,7 +72,7 @@
       if (e.target.closest(".orb")) return;
       const x = e.clientX / window.innerWidth - 0.5;
       const y = e.clientY / window.innerHeight - 0.5;
-      orb.style.transform = `rotateY(${x * 20}deg) rotateX(${-y * 20}deg)`;
+      orb.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
     });
   }
 
@@ -127,60 +127,76 @@
   }, { threshold: 0.6 });
   chestIO.observe(chest);
 
-  /* ---------- partículas douradas 3D na hero ---------- */
+  /* ---------- partículas douradas 3D na hero (suaves, em volta do selo) ---------- */
   const canvas = document.querySelector(".hero__canvas");
   const ctx = canvas.getContext("2d");
-  let W, H, DPR, pts = [], mouse = { x: 0, y: 0 }, rot = 0, raf;
-  const COUNT = window.innerWidth < 700 ? 260 : 620;
-  const resize = () => {
-    DPR = Math.min(window.devicePixelRatio || 1, 2);
-    W = canvas.clientWidth; H = canvas.clientHeight;
-    canvas.width = W * DPR; canvas.height = H * DPR;
-    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-  };
-  // esfera de Fibonacci + poeira solta
+  const orbEl = document.querySelector(".orb");
+  const small = window.innerWidth < 700;
+  const COUNT = small ? 160 : 380;
+  let W = 0, H = 0, DPR = 1, cx = 0, cy = 0, R = 0, raf = null, visible = true;
+  const target = { x: 0, y: 0 }, cur = { x: 0, y: 0 };
+  let rot = 0;
+  const pts = [];
   for (let i = 0; i < COUNT; i++) {
-    if (i < COUNT * 0.7) {
-      const y = 1 - (i / (COUNT * 0.7 - 1)) * 2;
-      const r = Math.sqrt(1 - y * y);
-      const th = i * 2.399963;
-      pts.push({ x: Math.cos(th) * r, y, z: Math.sin(th) * r, s: 1 });
-    } else {
-      pts.push({ x: (Math.random() - 0.5) * 3.4, y: (Math.random() - 0.5) * 2.4, z: (Math.random() - 0.5) * 3.4, s: 0.6 });
-    }
+    // casca esférica de Fibonacci levemente irregular: forma um halo ao redor da logo
+    const y = 1 - (i / (COUNT - 1)) * 2, r = Math.sqrt(1 - y * y), th = i * 2.399963;
+    const k = 1 + (Math.random() - 0.5) * 0.18;
+    pts.push({ x: Math.cos(th) * r * k, y: y * k, z: Math.sin(th) * r * k, s: 0.6 + Math.random() * 0.8, tw: Math.random() * 6.28 });
   }
-  window.addEventListener("pointermove", (e) => {
-    mouse.x = e.clientX / window.innerWidth - 0.5;
-    mouse.y = e.clientY / window.innerHeight - 0.5;
-  }, { passive: true });
-  const draw = () => {
-    ctx.clearRect(0, 0, W, H);
-    rot += 0.0016;
-    const ay = rot + mouse.x * 0.6, ax = 0.35 + mouse.y * 0.4;
-    const cy = Math.cos(ay), sy = Math.sin(ay), cx = Math.cos(ax), sx = Math.sin(ax);
-    const R = Math.min(W, H) * (W < 860 ? 0.42 : 0.36);
-    const ox = W < 860 ? W / 2 : W * 0.7, oy = W < 860 ? H * 0.3 : H / 2;
-    for (const p of pts) {
-      let x = p.x * cy - p.z * sy, z = p.x * sy + p.z * cy;
-      let y = p.y * cx - z * sx; z = p.y * sx + z * cx;
-      const f = 2.6 / (2.6 + z);
-      const px = ox + x * R * f, py = oy + y * R * f;
-      const a = Math.max(0, Math.min(1, (1 - z) * 0.45)) * p.s;
-      const size = Math.max(0.4, 1.6 * f * p.s);
-      ctx.fillStyle = `rgba(${230 + 20 * a | 0}, ${170 + 40 * a | 0}, ${95 + 40 * a | 0}, ${a})`;
-      ctx.beginPath(); ctx.arc(px, py, size, 0, Math.PI * 2); ctx.fill();
-    }
-    raf = requestAnimationFrame(draw);
+  const layout = () => {
+    const hr = canvas.getBoundingClientRect();
+    W = hr.width; H = hr.height;
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    const o = orbEl.getBoundingClientRect();
+    cx = o.left - hr.left + o.width / 2; cy = o.top - hr.top + o.height / 2;
+    R = o.width * 0.78;
   };
-  resize();
-  window.addEventListener("resize", resize);
-  if (!reduced) {
-    // pausa quando a hero sai da tela (economiza bateria)
+  let lastW = 0;
+  const onResize = () => { if (Math.abs(window.innerWidth - lastW) > 40 || !lastW) { lastW = window.innerWidth; layout(); } };
+  if (!reduced && finePointer) {
+    window.addEventListener("pointermove", (e) => {
+      target.x = (e.clientX / window.innerWidth - 0.5) * 0.5;
+      target.y = (e.clientY / window.innerHeight - 0.5) * 0.35;
+    }, { passive: true });
+  }
+  const draw = (t) => {
+    cur.x += (target.x - cur.x) * 0.035;
+    cur.y += (target.y - cur.y) * 0.035;
+    rot += 0.0012;
+    const ay = rot + cur.x, ax = 0.28 + cur.y;
+    const cA = Math.cos(ay), sA = Math.sin(ay), cB = Math.cos(ax), sB = Math.sin(ax);
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      let x = p.x * cA - p.z * sA, z = p.x * sA + p.z * cA;
+      const y = p.y * cB - z * sB; z = p.y * sB + z * cB;
+      const f = 2.8 / (2.8 + z);
+      const depth = (1 - z) / 2;                       // 0 = atrás, 1 = na frente
+      const twinkle = 0.75 + 0.25 * Math.sin(t * 0.0015 + p.tw);
+      const a = (0.12 + depth * 0.55) * twinkle;
+      ctx.globalAlpha = a;
+      ctx.beginPath();
+      ctx.arc(cx + x * R * f, cy + y * R * f, Math.max(0.5, p.s * f * (0.8 + depth)), 0, 6.283);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    raf = visible ? requestAnimationFrame(draw) : null;
+  };
+  ctx.fillStyle = "#f0c98a";
+  lastW = window.innerWidth; layout();
+  ctx.fillStyle = "#f0c98a";
+  window.addEventListener("resize", () => { onResize(); ctx.fillStyle = "#f0c98a"; });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); ctx.fillStyle = "#f0c98a"; });
+  if (reduced) { draw(0); cancelAnimationFrame(raf); raf = null; }
+  else {
     new IntersectionObserver((en) => {
-      if (en[0].isIntersecting) { if (!raf) raf = requestAnimationFrame(draw); }
-      else { cancelAnimationFrame(raf); raf = null; }
+      visible = en[0].isIntersecting && !document.hidden;
+      if (visible && !raf) raf = requestAnimationFrame(draw);
     }).observe(canvas);
-  } else {
-    draw(); cancelAnimationFrame(raf);
+    document.addEventListener("visibilitychange", () => {
+      visible = !document.hidden;
+      if (visible && !raf) raf = requestAnimationFrame(draw);
+    });
   }
 })();
