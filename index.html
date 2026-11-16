@@ -2,29 +2,27 @@
 <html lang="pt-BR" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <script>document.documentElement.className = "js";
-    /* proteção: só exibe o site no domínio oficial e nunca dentro de outro site */
-    (function () { var h = location.hostname, ok = ["rtestetica.com.br", "localhost", "127.0.0.1", ""];
-      if (window.top !== window.self) { try { window.top.location = location.href; } catch (e) { document.documentElement.style.display = "none"; } }
-      if (ok.indexOf(h) === -1) { location.replace("https://rtestetica.com.br" + location.pathname + location.search + location.hash); } })();</script>
+  <script src="assets/js/guard.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RT Estética Avançada | Depilação a Laser em Morrinhos - GO</title>
-  <meta name="description" content="RT Estética Avançada em Morrinhos - GO: depilação a laser, botox, enzimas, limpeza de pele, tratamento de estrias e vasinhos. Atendimento feminino e masculino. Agende sua avaliação pelo WhatsApp.">
-  <meta name="theme-color" content="#14020a">
+  <title>RT Estética Avançada | Depilação a laser e estética em Morrinhos - GO</title>
+  <meta name="description" content="Clínica de estética em Morrinhos - GO: depilação a laser, limpeza de pele, botox, harmonização facial, estrias, enzimas, drenagem, massagens, sobrancelhas e cílios. Atendimento feminino e masculino com horário marcado.">
+  <meta name="theme-color" content="#FBF7F2">
   <link rel="canonical" href="https://rtestetica.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="RT Estética Avançada | Laser e Bem-Estar">
-  <meta property="og:description" content="Depilação a laser e estética avançada em Morrinhos - GO. Agende sua avaliação.">
+  <meta property="og:site_name" content="RT Estética Avançada">
+  <meta property="og:title" content="RT Estética Avançada · Laser e Bem-Estar em Morrinhos">
+  <meta property="og:description" content="Depilação a laser e estética avançada com horário marcado. Agende sua avaliação pelo WhatsApp.">
   <meta property="og:url" content="https://rtestetica.com.br/">
   <meta property="og:image" content="https://rtestetica.com.br/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Google Search Console: cole aqui a meta tag de verificação, se não usar a verificação por DNS -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/logo.webp">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/fotos/recepcao-1400.webp" imagesrcset="assets/img/fotos/recepcao-720.webp 720w, assets/img/fotos/recepcao-1400.webp 1400w" imagesizes="(max-width: 860px) 100vw, 46vw">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
   {
@@ -34,339 +32,312 @@
     "slogan": "Laser e Bem-Estar",
     "url": "https://rtestetica.com.br/",
     "logo": "https://rtestetica.com.br/assets/img/logo.png",
-    "image": "https://rtestetica.com.br/assets/img/og.jpg",
+    "image": ["https://rtestetica.com.br/assets/img/fotos/recepcao-1400.webp", "https://rtestetica.com.br/assets/img/fotos/fachada-1400.webp"],
     "telephone": "+55 64 99272-4619",
-    "address": {"@type": "PostalAddress", "addressLocality": "Morrinhos", "addressRegion": "GO", "addressCountry": "BR"},
-    "sameAs": ["https://www.instagram.com/rt_esteticaavancanda/"],
-    "makesOffer": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Depilação a laser"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Botox"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Enzimas"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Limpeza de pele"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tratamento de estrias"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tratamento de vasinhos"}}
-    ]
+    "priceRange": "Sob consulta",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Gumercindo Inocêncio de Oliveira, 408 - Jardim Santa Fé",
+      "addressLocality": "Morrinhos",
+      "addressRegion": "GO",
+      "postalCode": "75652-124",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Morrinhos", "Caldas Novas", "Goiatuba", "Pontalina", "Piracanjuba"],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00", "closes": "19:00"
+    }],
+    "sameAs": ["https://www.instagram.com/rt_esteticaavancanda/"]
   }
   </script>
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- ============ HEADER ============ -->
-  <header class="nav" id="topo">
-    <a href="#inicio" class="nav__brand" aria-label="RT Estética Avançada - início">
-      <img src="assets/img/logo.webp" alt="" width="44" height="44">
-      <span><strong>RT</strong> Estética Avançada</span>
-    </a>
-    <nav class="nav__links" aria-label="Menu principal">
-      <a href="#laser">Laser</a>
-      <a href="#tratamentos">Tratamentos</a>
-      <a href="#porque">Por que a RT</a>
+  <!-- ============ TOPO ============ -->
+  <header class="topbar" id="topo">
+    <div class="topbar__inner">
+      <a href="#inicio" class="brand" aria-label="RT Estética Avançada, início">
+        <img src="assets/img/logo.webp" alt="" width="46" height="46">
+        <span class="brand__text"><span><strong>RT</strong> Estética Avançada</span><small>Laser e Bem-Estar</small></span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#laser">Depilação a laser</a>
+        <a href="#espaco">Nosso espaço</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn--wine btn--sm topbar__cta" data-wa="Olá! Vim pelo site e quero agendar uma avaliação." data-wa-origem="topo" href="#">Agendar</a>
+      <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>
+    </div>
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#laser">Depilação a laser</a>
+      <a href="#espaco">Nosso espaço</a>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#bau">Dúvidas</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn--wine" data-wa="Olá! Vim pelo site e quero agendar uma avaliação." data-wa-origem="menu" href="#">Agendar pelo WhatsApp</a>
     </nav>
-    <a class="btn btn--gold btn--sm nav__cta" data-wa="Olá! Vim pelo site e quero agendar minha avaliação." href="#">Agendar</a>
-    <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="inicio">
-    <canvas class="hero__canvas" aria-hidden="true"></canvas>
-    <div class="hero__beams" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="hero__inner">
-      <div class="hero__text">
-        <p class="eyebrow reveal">Estética avançada · Morrinhos - GO</p>
-        <h1 class="reveal">
-          Pele lisa, leve<br>e <em>livre</em> da lâmina.
-        </h1>
-        <p class="hero__lead reveal">
-          Depilação a laser e estética avançada com tecnologia, protocolo personalizado e o cuidado de quem trata cada pele como única. Para mulheres e homens.
-        </p>
-        <div class="hero__actions reveal">
-          <a class="btn btn--gold" data-wa="Olá! Vim pelo site e quero agendar minha avaliação de depilação a laser." href="#">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>
-            Agendar minha avaliação
-          </a>
-          <a class="btn btn--ghost" href="#laser">Conhecer o laser</a>
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="kicker reveal">Estética avançada em Morrinhos · GO</p>
+          <h1 class="reveal">Cuidar de você<br>é o nosso <em>ofício.</em></h1>
+          <p class="hero__lead reveal">Depilação a laser, tratamentos faciais e corporais, massagens e beleza do olhar, num espaço tranquilo, com horário marcado e atenção do começo ao fim. Para mulheres e homens.</p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--wine" data-wa="Olá! Vim pelo site e quero agendar minha avaliação." data-wa-origem="hero" href="#">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>
+              Agendar avaliação
+            </a>
+            <a class="btn btn--line" href="#servicos">Ver serviços</a>
+          </div>
+          <ul class="facts reveal">
+            <li><b>Seg a sex</b><span>9h às 19h, com horário marcado</span></li>
+            <li><b>Ela e ele</b><span>atendimento feminino e masculino</span></li>
+            <li><b>Morrinhos</b><span>cidade, região e zona rural</span></li>
+          </ul>
         </div>
-        <ul class="hero__badges reveal">
-          <li><b>+3 mil</b><span>seguidores acompanham a RT</span></li>
-          <li><b>♀ ♂</b><span>atendimento feminino e masculino</span></li>
-          <li><b>1:1</b><span>protocolo feito para a sua pele</span></li>
-        </ul>
+        <figure class="hero__photo reveal">
+          <img src="assets/img/fotos/recepcao-1400.webp" srcset="assets/img/fotos/recepcao-720.webp 720w, assets/img/fotos/recepcao-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 46vw" alt="Recepção da RT Estética Avançada com o painel da marca, mesa de madeira rústica e plantas" width="1400" height="1614" fetchpriority="high">
+          <figcaption>Nossa recepção, no Jardim Santa Fé</figcaption>
+        </figure>
       </div>
+    </section>
 
-      <div class="hero__visual" aria-hidden="true">
-        <div class="orb" data-tilt>
-          <div class="orb__ring r1"></div>
-          <div class="orb__ring r2"></div>
-          <div class="orb__ring r3"></div>
-          <div class="orb__glow"></div>
-          <img class="orb__logo" src="assets/img/logo.webp" alt="" width="420" height="420">
-          <span class="orb__chip c1">Laser</span>
-          <span class="orb__chip c2">Bem-Estar</span>
-          <span class="orb__chip c3">Autoestima</span>
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section" id="servicos">
+      <div class="wrap">
+        <header class="head">
+          <p class="kicker reveal">Serviços</p>
+          <h2 class="reveal">Tudo o que a gente faz, <em>com calma e cuidado.</em></h2>
+          <p class="head__sub reveal">Cada tratamento começa por uma avaliação. Assim a gente indica o que faz sentido para você, sem empurrar pacote.</p>
+        </header>
+
+        <div class="tabs reveal" role="tablist" aria-label="Categorias de serviços">
+          <button role="tab" aria-selected="true" aria-controls="tab-laser" id="t-laser">Depilação a laser</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-facial" id="t-facial" tabindex="-1">Facial</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-corporal" id="t-corporal" tabindex="-1">Corporal</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-massagem" id="t-massagem" tabindex="-1">Massagens</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-olhar" id="t-olhar" tabindex="-1">Sobrancelhas e cílios</button>
         </div>
-      </div>
-    </div>
-    <a href="#laser" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
-  </section>
 
-  <!-- ============ MARQUEE ============ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Depilação a Laser</span><i>✦</i><span>Botox</span><i>✦</i><span>Enzimas</span><i>✦</i><span>Limpeza de Pele</span><i>✦</i><span>Estrias</span><i>✦</i><span>Vasinhos</span><i>✦</i>
-      <span>Depilação a Laser</span><i>✦</i><span>Botox</span><i>✦</i><span>Enzimas</span><i>✦</i><span>Limpeza de Pele</span><i>✦</i><span>Estrias</span><i>✦</i><span>Vasinhos</span><i>✦</i>
-    </div>
-  </div>
+        <div class="panels">
+          <div class="panel" role="tabpanel" id="tab-laser" aria-labelledby="t-laser">
+            <article class="svc svc--wide">
+              <div><h3>Depilação a laser</h3>
+              <p>Reduz os pelos aos poucos, sessão após sessão, e acaba com a rotina de lâmina, cera e pelo encravado. Os parâmetros do aparelho são ajustados para o seu tipo de pele e de pelo.</p></div>
+              <ul class="svc__list"><li>Virilha completa</li><li>Pernas completas</li><li>Meia perna</li><li>Braços</li><li>Faixa de barba</li><li>Abdômen</li><li>Tórax</li><li>Costas</li><li>Outras regiões do corpo</li></ul>
+              <a class="svc__link" href="#laser">Montar meu pedido por áreas →</a>
+            </article>
+          </div>
 
-  <!-- ============ LASER ============ -->
-  <section class="section laser" id="laser">
-    <div class="container laser__grid">
-      <div class="laser__copy">
-        <p class="eyebrow reveal">O carro-chefe da casa</p>
-        <h2 class="reveal">Depilação a laser<br><em>sem complicação.</em></h2>
-        <p class="reveal">
-          O laser age no folículo do pelo e, sessão após sessão, os fios ficam mais finos, mais fracos e cada vez mais raros. Adeus lâmina, cera, pelo encravado e manchas de irritação.
-        </p>
-        <ul class="checks reveal">
-          <li>Avaliação do seu tipo de pele e pelo antes de começar</li>
-          <li>Parâmetros ajustados a cada sessão</li>
-          <li>Sessões rápidas, que cabem na sua rotina</li>
-          <li>Resultado progressivo e duradouro</li>
-        </ul>
-        <a class="btn btn--gold reveal" data-wa="Olá! Quero saber mais sobre a depilação a laser e agendar uma avaliação." href="#">Quero minha avaliação</a>
-      </div>
+          <div class="panel" role="tabpanel" id="tab-facial" aria-labelledby="t-facial" hidden>
+            <article class="svc"><h3>Limpeza de pele</h3><p>Remove impurezas, desobstrui os poros e devolve leveza e viço à pele.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre limpeza de pele." data-wa-origem="servico-limpeza" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Botox (toxina botulínica)</h3><p>Suaviza linhas de expressão com naturalidade. Realizado por profissional habilitado, mediante avaliação.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre botox." data-wa-origem="servico-botox" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Harmonização facial</h3><p>Procedimentos para equilibrar e valorizar os traços do rosto, sempre com indicação individual.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre harmonização facial." data-wa-origem="servico-harmonizacao" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Tratamentos faciais</h3><p>Protocolos para textura, manchas, oleosidade e aspecto geral da pele, de acordo com a avaliação.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre tratamentos faciais." data-wa-origem="servico-facial" href="#">Perguntar no WhatsApp →</a></article>
+          </div>
 
-      <div class="laser__areas reveal">
-        <div class="body3d" data-tilt>
-          <div class="body3d__card">
-            <h3>Áreas mais procuradas</h3>
-            <div class="chips">
-              <button class="chip" data-area="Axilas">Axilas</button>
-              <button class="chip" data-area="Buço">Buço</button>
-              <button class="chip" data-area="Virilha">Virilha</button>
-              <button class="chip" data-area="Perianal">Perianal</button>
-              <button class="chip" data-area="Pernas">Pernas</button>
-              <button class="chip" data-area="Rosto">Rosto</button>
-              <button class="chip" data-area="Barba">Barba</button>
-              <button class="chip" data-area="Peito">Peito</button>
-              <button class="chip" data-area="Costas">Costas</button>
-              <button class="chip" data-area="Abdômen">Abdômen</button>
-              <button class="chip" data-area="Braços">Braços</button>
-              <button class="chip" data-area="Corpo inteiro">Corpo inteiro</button>
-            </div>
-            <p class="chips__hint">Toque nas áreas que você quer tratar e monte seu pedido:</p>
-            <a class="btn btn--gold btn--block" id="areasCta" href="#">Pedir orçamento das áreas</a>
+          <div class="panel" role="tabpanel" id="tab-corporal" aria-labelledby="t-corporal" hidden>
+            <article class="svc"><h3>Estrias</h3><p>Tratamentos para melhorar a cor e a textura das estrias e deixar a pele mais uniforme.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre o tratamento de estrias." data-wa-origem="servico-estrias" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Aplicação de enzimas</h3><p>Indicada para gordura localizada e contorno corporal, conforme avaliação.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre aplicação de enzimas." data-wa-origem="servico-enzimas" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Varizes e vasinhos</h3><p>Tratamentos conforme indicação e habilitação profissional, sempre após avaliação.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre o tratamento de varizes e vasinhos." data-wa-origem="servico-varizes" href="#">Perguntar no WhatsApp →</a></article>
+            <article class="svc"><h3>Drenagem linfática</h3><p>Ajuda a reduzir o inchaço e a sensação de peso, com toque leve e ritmado.</p><a class="svc__link" data-wa="Olá! Quero saber mais sobre drenagem linfática." data-wa-origem="servico-drenagem" href="#">Perguntar no WhatsApp →</a></article>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-massagem" aria-labelledby="t-massagem" hidden>
+            <article class="svc"><h3>Massagem relaxante</h3><p>Para desacelerar, aliviar a tensão do dia a dia e dormir melhor.</p><a class="svc__link" data-wa="Olá! Quero agendar uma massagem relaxante." data-wa-origem="servico-relaxante" href="#">Agendar no WhatsApp →</a></article>
+            <article class="svc"><h3>Massagem esportiva</h3><p>Para quem treina: ajuda na recuperação muscular e na mobilidade.</p><a class="svc__link" data-wa="Olá! Quero agendar uma massagem esportiva." data-wa-origem="servico-esportiva" href="#">Agendar no WhatsApp →</a></article>
+            <article class="svc"><h3>Massagem com drenagem</h3><p>Une o relaxamento da massagem aos movimentos da drenagem.</p><a class="svc__link" data-wa="Olá! Quero agendar uma massagem com drenagem." data-wa-origem="servico-massagem-drenagem" href="#">Agendar no WhatsApp →</a></article>
+          </div>
+
+          <div class="panel" role="tabpanel" id="tab-olhar" aria-labelledby="t-olhar" hidden>
+            <article class="svc"><h3>Design de sobrancelhas</h3><p>Desenho pensado para o formato do seu rosto, valorizando o olhar sem exageros.</p><a class="svc__link" data-wa="Olá! Quero agendar design de sobrancelhas." data-wa-origem="servico-sobrancelhas" href="#">Agendar no WhatsApp →</a></article>
+            <article class="svc"><h3>Procedimentos para cílios</h3><p>Para um olhar mais marcante no dia a dia. Pergunte quais técnicas estão disponíveis.</p><a class="svc__link" data-wa="Olá! Quero saber dos procedimentos para cílios." data-wa-origem="servico-cilios" href="#">Perguntar no WhatsApp →</a></article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ TRATAMENTOS ============ -->
-  <section class="section treat" id="tratamentos">
-    <div class="container">
-      <header class="section__head">
-        <p class="eyebrow reveal">Estética avançada</p>
-        <h2 class="reveal">Tratamentos que<br><em>elevam sua autoestima.</em></h2>
-      </header>
-      <div class="cards">
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">✦</div>
-          <h3>Depilação a Laser</h3>
-          <p>Redução progressiva dos pelos, com fim do encravamento e da irritação da lâmina.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre Depilação a Laser.">Saber mais →</a>
-        </article>
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">◈</div>
-          <h3>Botox</h3>
-          <p>Suaviza linhas de expressão e devolve um olhar mais descansado, com naturalidade.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre Botox.">Saber mais →</a>
-        </article>
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">❖</div>
-          <h3>Enzimas</h3>
-          <p>Aplicação de enzimas para tratar gordura localizada, flacidez e contorno.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre Enzimas.">Saber mais →</a>
-        </article>
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">◎</div>
-          <h3>Limpeza de Pele</h3>
-          <p>Remove impurezas, desobstrui os poros e deixa a pele leve, viçosa e preparada.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre Limpeza de Pele.">Saber mais →</a>
-        </article>
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">≋</div>
-          <h3>Estrias</h3>
-          <p>Protocolos para melhorar a textura e a cor das estrias e uniformizar a pele.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre o tratamento de Estrias.">Saber mais →</a>
-        </article>
-        <article class="card reveal" data-tilt>
-          <div class="card__icon">⟡</div>
-          <h3>Vasinhos</h3>
-          <p>Tratamento dos vasinhos para pernas mais uniformes e confiança para usar o que quiser.</p>
-          <a href="#" data-wa="Olá! Quero saber mais sobre o tratamento de Vasinhos.">Saber mais →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ POR QUE A RT ============ -->
-  <section class="section why" id="porque">
-    <div class="container">
-      <header class="section__head">
-        <p class="eyebrow reveal">Por que fazer com a gente?</p>
-        <h2 class="reveal">Seis motivos para<br><em>escolher a RT.</em></h2>
-        <p class="section__sub reveal">Passe o mouse ou toque nos cards para virar.</p>
-      </header>
-      <div class="flips">
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">01</span><h3>Tecnologia a laser</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Equipamento de laser e protocolos atualizados para entregar resultado com segurança.</p></div>
+    <!-- ============ LASER ============ -->
+    <section class="section section--rose" id="laser">
+      <div class="wrap split">
+        <figure class="split__photo reveal">
+          <img src="assets/img/fotos/laser-720.webp" srcset="assets/img/fotos/laser-720.webp 720w, assets/img/fotos/laser-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 44vw" alt="Aparelho de depilação a laser ao lado da maca na sala de atendimento" width="1400" height="1254" loading="lazy">
+        </figure>
+        <div class="split__text">
+          <p class="kicker reveal">Depilação a laser</p>
+          <h2 class="reveal">Escolha as áreas e <em>a gente te responde.</em></h2>
+          <p class="reveal">Toque nas regiões que você quer tratar. O pedido vai pronto para o nosso WhatsApp e a gente te passa a avaliação e os valores.</p>
+          <div class="areas reveal" role="group" aria-label="Áreas para depilação a laser">
+            <button class="area" aria-pressed="false">Virilha completa</button>
+            <button class="area" aria-pressed="false">Pernas completas</button>
+            <button class="area" aria-pressed="false">Meia perna</button>
+            <button class="area" aria-pressed="false">Braços</button>
+            <button class="area" aria-pressed="false">Axilas</button>
+            <button class="area" aria-pressed="false">Buço</button>
+            <button class="area" aria-pressed="false">Faixa de barba</button>
+            <button class="area" aria-pressed="false">Abdômen</button>
+            <button class="area" aria-pressed="false">Tórax</button>
+            <button class="area" aria-pressed="false">Costas</button>
+            <button class="area" aria-pressed="false">Outra região</button>
           </div>
-        </div>
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">02</span><h3>Protocolo só seu</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Nada de pacote genérico: avaliamos sua pele, seu pelo e seu objetivo antes de começar.</p></div>
-          </div>
-        </div>
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">03</span><h3>Ambiente acolhedor</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Um espaço pensado para você relaxar, com privacidade e atenção do começo ao fim.</p></div>
-          </div>
-        </div>
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">04</span><h3>Para elas e para eles</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Atendimento feminino e masculino, com o mesmo cuidado e discrição.</p></div>
-          </div>
-        </div>
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">05</span><h3>Acompanhamento real</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Você acompanha sua evolução sessão a sessão e tira dúvidas direto pelo WhatsApp.</p></div>
-          </div>
-        </div>
-        <div class="flip reveal" tabindex="0">
-          <div class="flip__inner">
-            <div class="flip__face flip__front"><span class="flip__n">06</span><h3>Pertinho de você</h3><span class="flip__hint">virar ↻</span></div>
-            <div class="flip__face flip__back"><p>Estética avançada de verdade aqui em Morrinhos, sem precisar viajar.</p></div>
-          </div>
+          <a class="btn btn--wine reveal" id="areasCta" data-wa-origem="laser-areas" href="#">Pedir avaliação das áreas</a>
+          <ul class="ticks reveal">
+            <li>Avaliação da pele e do pelo antes de começar</li>
+            <li>Sessões rápidas, com horário marcado</li>
+            <li>Atendimento feminino e masculino</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ COMO FUNCIONA ============ -->
-  <section class="section steps" id="como-funciona">
-    <div class="container">
-      <header class="section__head">
-        <p class="eyebrow reveal">Como funciona</p>
-        <h2 class="reveal">Do primeiro “oi”<br><em>à pele dos sonhos.</em></h2>
-      </header>
-      <ol class="timeline">
-        <li class="reveal"><span>1</span><h3>Chama no WhatsApp</h3><p>Conta o que você quer tratar e escolhe o melhor horário.</p></li>
-        <li class="reveal"><span>2</span><h3>Avaliação</h3><p>Analisamos sua pele e montamos o protocolo ideal para você.</p></li>
-        <li class="reveal"><span>3</span><h3>Sessões</h3><p>Atendimento rápido e confortável, no ritmo da sua rotina.</p></li>
-        <li class="reveal"><span>4</span><h3>Resultado</h3><p>Pele cuidada, autoestima lá em cima e manutenção quando precisar.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ BAÚ DE PERGUNTAS ============ -->
-  <section class="section bau" id="bau">
-    <div class="container bau__grid">
-      <div class="bau__stage reveal">
-        <button class="chest" id="chest" aria-expanded="false" aria-controls="faq" aria-label="Abrir o baú de perguntas">
-          <span class="chest__shine"></span>
-          <span class="chest__lid"><span class="chest__lid-front"></span><span class="chest__lid-top"></span></span>
-          <span class="chest__body"><span class="chest__lock"></span></span>
-          <span class="chest__light"></span>
-          <span class="chest__sparks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-        </button>
-        <p class="bau__cta">Toque no baú ✦</p>
-      </div>
-      <div class="bau__copy">
-        <p class="eyebrow reveal">Baú de perguntas</p>
-        <h2 class="reveal">Tudo o que você<br><em>quer saber.</em></h2>
-        <p class="reveal">Abra o baú: guardamos aqui as dúvidas que mais chegam no nosso WhatsApp.</p>
-        <div class="faq" id="faq">
-          <details>
-            <summary>A depilação a laser dói?</summary>
-            <p>A sensação é bem tolerável, parecida com um leve beliscão ou calor rápido. Ajustamos a intensidade à sua sensibilidade para a sessão ser confortável.</p>
-          </details>
-          <details>
-            <summary>Quantas sessões vou precisar?</summary>
-            <p>Depende da área, da cor do pelo, do tipo de pele e de fatores hormonais. Na avaliação definimos o número estimado de sessões para o seu caso.</p>
-          </details>
-          <details>
-            <summary>Qual o intervalo entre as sessões?</summary>
-            <p>Respeitamos o ciclo de crescimento do pelo, por isso as sessões são espaçadas em algumas semanas. O intervalo exato depende da área tratada.</p>
-          </details>
-          <details>
-            <summary>Como me preparar para a sessão?</summary>
-            <p>Raspe a área com lâmina antes da sessão (nada de cera ou pinça nas semanas anteriores), venha com a pele limpa, sem cremes, e evite sol na região. Passamos todas as orientações no agendamento.</p>
-          </details>
-          <details>
-            <summary>Posso tomar sol durante o tratamento?</summary>
-            <p>O ideal é evitar exposição solar na área tratada e usar protetor solar. Pele bronzeada pode exigir ajustes ou adiar a sessão.</p>
-          </details>
-          <details>
-            <summary>Homens também podem fazer?</summary>
-            <p>Claro! Temos atendimento masculino para barba, peito, costas, abdômen e outras áreas.</p>
-          </details>
-          <details>
-            <summary>Serve para todo tipo de pele?</summary>
-            <p>A indicação é feita na avaliação, em que analisamos seu fototipo e o tipo de pelo para garantir segurança e escolher os parâmetros certos.</p>
-          </details>
-          <details>
-            <summary>Quais as formas de pagamento?</summary>
-            <p>Temos condições facilitadas. Chame no WhatsApp que passamos os valores e opções de pagamento para as áreas que você quer.</p>
-          </details>
-          <details>
-            <summary>Onde vocês ficam?</summary>
-            <p>Estamos em Morrinhos - GO. Chame no WhatsApp que enviamos a localização certinha.</p>
-          </details>
+    <!-- ============ ESPAÇO ============ -->
+    <section class="section" id="espaco">
+      <div class="wrap">
+        <header class="head head--row">
+          <div>
+            <p class="kicker reveal">Nosso espaço</p>
+            <h2 class="reveal">Um lugar pensado para <em>você se sentir à vontade.</em></h2>
+          </div>
+          <p class="head__sub reveal">Salas reservadas, climatizadas e preparadas com cuidado. Fica no Jardim Santa Fé, em Morrinhos.</p>
+        </header>
+        <div class="gallery">
+          <figure class="g g--a reveal"><img src="assets/img/fotos/sala-plantas-720.webp" srcset="assets/img/fotos/sala-plantas-720.webp 720w, assets/img/fotos/sala-plantas-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala de atendimento com maca, cortinas claras e aparador de madeira com plantas" loading="lazy" width="1400" height="1313"></figure>
+          <figure class="g g--b reveal"><img src="assets/img/fotos/fachada-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Letreiro da RT Estética Avançada na fachada" loading="lazy" width="720" height="518"></figure>
+          <figure class="g g--c reveal"><img src="assets/img/fotos/detalhe-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Detalhe da recepção com esculturas brancas e plantas" loading="lazy" width="720" height="541"></figure>
+          <figure class="g g--d reveal"><img src="assets/img/fotos/entrada-720.webp" srcset="assets/img/fotos/entrada-720.webp 720w, assets/img/fotos/entrada-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 25vw" alt="Entrada da clínica com o painel da marca ao lado da porta" loading="lazy" width="1380" height="1440"></figure>
+          <figure class="g g--e reveal"><img src="assets/img/fotos/sala-cortina-720.webp" srcset="assets/img/fotos/sala-cortina-720.webp 720w, assets/img/fotos/sala-cortina-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala do laser com maca e cortinas" loading="lazy" width="1400" height="1175"></figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ CTA FINAL ============ -->
-  <section class="final" id="agendar">
-    <div class="final__ring" aria-hidden="true"></div>
-    <div class="container final__inner">
-      <img src="assets/img/logo.webp" alt="RT Estética Avançada - Laser e Bem-Estar" width="150" height="150" loading="lazy">
-      <h2 class="reveal">Sua melhor versão<br><em>começa com uma conversa.</em></h2>
-      <p class="reveal">Agende sua avaliação e descubra o protocolo ideal para você.</p>
-      <a class="btn btn--gold btn--lg reveal" data-wa="Olá! Vim pelo site e quero agendar minha avaliação." href="#">Agendar pelo WhatsApp</a>
-    </div>
-  </section>
+    <!-- ============ POR QUE A RT ============ -->
+    <section class="section section--cream" id="porque">
+      <div class="wrap">
+        <header class="head">
+          <p class="kicker reveal">Por que fazer com a gente</p>
+          <h2 class="reveal">O que você encontra <em>na RT.</em></h2>
+        </header>
+        <div class="reasons">
+          <div class="reason reveal"><span>01</span><h3>Avaliação antes de tudo</h3><p>Nada de pacote pronto. Primeiro entendemos sua pele, sua rotina e o que você quer.</p></div>
+          <div class="reason reveal"><span>02</span><h3>Horário marcado</h3><p>Você chega na sua hora e é atendida sem pressa, com privacidade.</p></div>
+          <div class="reason reveal"><span>03</span><h3>Muitos cuidados num só lugar</h3><p>Laser, rosto, corpo, massagens, sobrancelhas e cílios, com a mesma atenção.</p></div>
+          <div class="reason reveal"><span>04</span><h3>Pertinho de você</h3><p>Atendemos Morrinhos, a região e quem vem da zona rural.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============ FOOTER ============ -->
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section" id="como-funciona">
+      <div class="wrap">
+        <header class="head">
+          <p class="kicker reveal">Como funciona</p>
+          <h2 class="reveal">Do primeiro “oi” <em>ao seu horário.</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><b>1</b><h3>Você chama no WhatsApp</h3><p>Conta o que quer tratar. Se preferir, a assistente do site já organiza sua mensagem.</p></li>
+          <li class="reveal"><b>2</b><h3>Avaliação</h3><p>Olhamos sua pele e seu objetivo e indicamos o melhor caminho.</p></li>
+          <li class="reveal"><b>3</b><h3>Atendimento</h3><p>No dia e horário combinados, num ambiente tranquilo.</p></li>
+          <li class="reveal"><b>4</b><h3>Acompanhamento</h3><p>Você tira dúvidas com a gente entre uma sessão e outra.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DÚVIDAS (baú) ============ -->
+    <section class="section section--rose" id="duvidas">
+      <div class="wrap faq-grid">
+        <div class="faq-intro">
+          <p class="kicker reveal">Baú de perguntas</p>
+          <h2 class="reveal">As dúvidas <em>que mais chegam.</em></h2>
+          <p class="reveal">Não achou a sua? Fale com a assistente aqui do site ou chame direto no WhatsApp.</p>
+          <button class="btn btn--line reveal" data-open-chat>Conversar com a assistente</button>
+        </div>
+        <div class="faq reveal">
+          <details open><summary>A depilação a laser dói?</summary><p>A maioria das pessoas descreve como um calor rápido ou um leve beliscão. A intensidade é ajustada para o seu conforto.</p></details>
+          <details><summary>Quantas sessões vou precisar?</summary><p>Depende da área, da cor e espessura do pelo, do tipo de pele e de fatores hormonais. Na avaliação passamos uma estimativa para o seu caso.</p></details>
+          <details><summary>Como me preparar para a sessão de laser?</summary><p>Raspe a área com lâmina antes da sessão, não use cera nem pinça nas semanas anteriores, venha com a pele limpa e evite sol na região. Mandamos todas as orientações no agendamento.</p></details>
+          <details><summary>Atendem homens?</summary><p>Sim. Temos atendimento masculino para depilação a laser (barba, tórax, costas, abdômen e outras áreas), massagens e tratamentos de pele.</p></details>
+          <details><summary>Botox e harmonização são feitos por quem?</summary><p>Por profissional habilitado, sempre depois de uma avaliação individual. Tiramos todas as dúvidas antes de qualquer procedimento.</p></details>
+          <details><summary>Quais são os valores?</summary><p>Os valores dependem do serviço, da área e do número de sessões. Chame no WhatsApp que passamos tudo certinho.</p></details>
+          <details><summary>Onde vocês ficam e qual o horário?</summary><p>Rua Gumercindo Inocêncio de Oliveira, 408, Jardim Santa Fé, Morrinhos - GO. Segunda a sexta, das 9h às 19h, com horário marcado.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <div class="wrap contact__grid">
+        <figure class="contact__photo reveal">
+          <img src="assets/img/fotos/fachada-408-720.webp" srcset="assets/img/fotos/fachada-408-720.webp 720w, assets/img/fotos/fachada-408-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Fachada da RT Estética Avançada com o número 408" loading="lazy" width="1400" height="1095">
+        </figure>
+        <div class="contact__text">
+          <p class="kicker reveal">Agende sua avaliação</p>
+          <h2 class="reveal">A gente te espera <em>no 408.</em></h2>
+          <dl class="info reveal">
+            <div><dt>WhatsApp</dt><dd><a data-wa="Olá! Vim pelo site e quero agendar uma avaliação." data-wa-origem="contato" href="#">(64) 99272-4619</a></dd></div>
+            <div><dt>Endereço</dt><dd>Rua Gumercindo Inocêncio de Oliveira, 408<br>Jardim Santa Fé · Morrinhos - GO · 75652-124</dd></div>
+            <div><dt>Horário</dt><dd>Segunda a sexta, das 9h às 19h<br>Atendimento com horário marcado</dd></div>
+          </dl>
+          <div class="hero__actions reveal">
+            <a class="btn btn--wine" data-wa="Olá! Vim pelo site e quero agendar uma avaliação." data-wa-origem="contato-btn" href="#">Agendar pelo WhatsApp</a>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&query=Rua+Gumercindo+Inoc%C3%AAncio+de+Oliveira+408+Morrinhos+GO" target="_blank" rel="noopener" data-track="como_chegar">Como chegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <a href="#inicio" class="nav__brand"><img src="assets/img/logo.webp" alt="" width="44" height="44" loading="lazy"><span><strong>RT</strong> Estética Avançada</span></a>
-        <p>Laser e Bem-Estar · Morrinhos - GO</p>
-      </div>
-      <div class="footer__links">
-        <a data-wa="Olá! Vim pelo site." href="#">WhatsApp · (64) 99272-4619</a>
-        <a href="https://www.instagram.com/rt_esteticaavancanda/" target="_blank" rel="noopener">Instagram · @rt_esteticaavancanda</a>
-      </div>
+    <div class="wrap footer__grid">
+      <a href="#inicio" class="brand"><img src="assets/img/logo.webp" alt="" width="40" height="40" loading="lazy"><span class="brand__text"><span><strong>RT</strong> Estética Avançada</span><small>Laser e Bem-Estar</small></span></a>
+      <nav class="footer__links" aria-label="Rodapé">
+        <a href="https://www.instagram.com/rt_esteticaavancanda/" target="_blank" rel="noopener">Instagram</a>
+        <a data-wa="Olá! Vim pelo site." data-wa-origem="rodape" href="#">WhatsApp</a>
+        <button class="linklike" data-cookie-settings>Preferências de cookies</button>
+      </nav>
     </div>
-    <p class="footer__copy">© <span id="ano"></span> RT Estética Avançada. Todos os direitos reservados.</p>
+    <p class="footer__legal">© <span id="ano"></span> RT Estética Avançada · Morrinhos - GO. Procedimentos realizados mediante avaliação. Resultados podem variar de pessoa para pessoa.</p>
   </footer>
 
-  <a class="wa-float" data-wa="Olá! Vim pelo site e quero agendar minha avaliação." href="#" aria-label="Falar no WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></svg>
-  </a>
+  <!-- ============ ASSISTENTE ============ -->
+  <button class="chat-fab" aria-label="Abrir conversa com a assistente da RT" aria-expanded="false" aria-controls="chat">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
+    <span class="chat-fab__label">Dúvidas? Fale com a gente</span>
+  </button>
+  <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+    <header class="chat__head">
+      <img src="assets/img/logo.webp" alt="" width="38" height="38">
+      <div><strong id="chat-title">Assistente RT</strong><span>Respostas rápidas · atendimento humano no WhatsApp</span></div>
+      <button class="chat__close" aria-label="Fechar conversa">×</button>
+    </header>
+    <div class="chat__body" aria-live="polite"></div>
+    <div class="chat__quick"></div>
+    <form class="chat__form" autocomplete="off">
+      <label class="sr" for="chat-input">Escreva sua dúvida</label>
+      <input id="chat-input" type="text" maxlength="200" placeholder="Escreva sua dúvida…">
+      <button type="submit" aria-label="Enviar">→</button>
+    </form>
+  </section>
 
+  <!-- ============ COOKIES (LGPD) ============ -->
+  <div class="cookies" role="region" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies para medir as visitas e melhorar nossos anúncios. Você pode aceitar ou recusar.</p>
+    <div><button class="btn btn--line btn--sm" data-consent="deny">Recusar</button><button class="btn btn--wine btn--sm" data-consent="grant">Aceitar</button></div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/tracking.js"></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/chat.js" defer></script>
 </body>
 </html>
