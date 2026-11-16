@@ -4,11 +4,10 @@
 WHATS = "(64) 99272-4619"
 SITE = "rtestetica.com.br"
 
-TAGS = ("#depilacaoalaser #morrinhos #morrinhosgo #esteticamorrinhos #caldasnovas "
-        "#goiatuba #pontalina #piracanjuba #goias #esteticaavancada #autoestima #rtestetica")
+TAGS = "#depilacaoalaser #morrinhosgo #esteticamorrinhos #caldasnovas #goiatuba #pontalina"
 
-FOOT = (f"\n\n📲 Agende pelo WhatsApp: {WHATS}\n🌐 Tudo sobre os tratamentos: {SITE}\n"
-        f"📍 Morrinhos - GO · atendemos a cidade, a região e a zona rural, com horário marcado.\n\n{TAGS}")
+FOOT = (f"\n\nAgendamentos pelo WhatsApp: {WHATS}\nSaiba mais em {SITE}\n"
+        f"RT Estética Avançada · Morrinhos - GO. Atendemos a cidade, a região e a zona rural, sempre com horário marcado.\n\n{TAGS}")
 
 POSTS = [
   {
@@ -21,7 +20,7 @@ POSTS = [
       ("Horário marcado", "Sem fila e sem espera: você agenda pelo WhatsApp e é atendida na sua hora."),
       ("Pertinho de você", "Na cidade ou na zona rural: estética avançada aqui em Morrinhos, sem precisar viajar."),
     ],
-    "caption": "6 motivos para escolher a RT na hora de começar a depilação a laser ✨\n\nArrasta pro lado e vê por que tanta gente de Morrinhos e região já trocou a lâmina pelo laser. Aqui tudo começa com uma avaliação da sua pele, o protocolo é feito sob medida e o atendimento é com horário marcado, sem espera.\n\nSalva esse post e manda pra amiga que vive reclamando de pelo encravado 😉",
+    "caption": "Antes de qualquer sessão de laser, a gente quer entender a sua pele. Por isso todo atendimento na RT começa com uma avaliação: tipo de pele, tipo de pelo, áreas e rotina. A partir daí o protocolo é montado para você, com horário marcado e sem espera.\n\nArraste para ver os outros motivos. Ficou alguma dúvida? É só chamar.",
   },
   {
     "slug": "02-coisas-da-lamina", "date": "2026-11-20T10:00:00", "tema": "Engraçado",
@@ -33,7 +32,7 @@ POSTS = [
       ("O corte clássico", "Comprar lâmina nova toda semana e, mesmo assim, sair com um cortinho no tornozelo."),
       ("Plot twist", "Existe vida sem lâmina. E ela se chama depilação a laser."),
     ],
-    "caption": "Se você se identificou com pelo menos 3, a gente precisa conversar 😂\n\nMarca aqui embaixo a amiga que vive o item 3 (todo mundo tem uma). E se você também cansou da lâmina, a depilação a laser deixa os pelos cada vez mais finos e raros, sessão após sessão.",
+    "caption": "Se você se identificou com pelo menos três, a gente se entende. A lâmina resolve no dia a dia, mas cobra caro: irritação, pelo encravado e aquele cortinho que sempre aparece. Com o laser, os pelos ficam mais finos e mais raros a cada sessão.\n\nMarque aqui a amiga que vive o item 3.",
   },
   {
     "slug": "03-por-que-se-cuidar", "date": "2026-11-24T18:00:00", "tema": "Por que se cuidar",
@@ -45,7 +44,7 @@ POSTS = [
       ("Hábito, não luxo", "Cuidar de si não é exagero. É um compromisso com você mesma."),
       ("Comece pela avaliação", "A gente te orienta em cada passo, no seu ritmo."),
     ],
-    "caption": "Quantas vezes você deixou você mesma pra depois? 💭\n\nSe cuidar não é frescura. É reservar um tempo para se sentir bem com o próprio corpo e com a própria pele. Na RT, cada atendimento é pensado para ser o seu momento.\n\nComenta um 💛 se você vai se colocar em primeiro lugar esse mês.",
+    "caption": "Cuidar de você não é exagero nem vaidade. É reservar um tempo para se sentir bem no próprio corpo, e isso aparece em tudo: no humor, na postura, na confiança.\n\nSe este mês você vai se colocar em primeiro lugar, comece por uma conversa com a gente.",
   },
   {
     "slug": "04-mulher-moderna", "date": "2026-11-26T10:00:00", "tema": "Pra mulher moderna",
@@ -57,7 +56,7 @@ POSTS = [
       ("Mais tempo pra você", "Menos tempo no banheiro, mais tempo pro que realmente importa."),
       ("Do seu jeito", "Horário marcado pelo WhatsApp, encaixado na sua rotina."),
     ],
-    "caption": "Você é multitarefa, resolve mil coisas por dia... e ainda perde tempo com lâmina? 👀\n\nA depilação a laser foi feita para a rotina da mulher de hoje: sessões rápidas, resultado progressivo e muito mais liberdade no dia a dia. Atendimento em Morrinhos com horário marcado, do jeito que cabe na sua agenda.",
+    "caption": "Trabalho, casa, filhos, faculdade, academia. Na rotina de hoje, depilar toda semana é só mais uma tarefa na lista. O laser reduz os pelos aos poucos, em sessões rápidas, e devolve esse tempo para você.\n\nOs horários são marcados pelo WhatsApp, do jeito que cabe na sua agenda.",
   },
   {
     "slug": "05-ironico-lamina", "date": "2026-11-30T18:00:00", "tema": "Irônico",
@@ -69,7 +68,7 @@ POSTS = [
       ("Ótimo investimento", "Gastar com lâmina e cera pra sempre. Que planejamento financeiro!"),
       ("Ou então...", "Você pode dar tchau pra tudo isso com a depilação a laser."),
     ],
-    "caption": "Ok, a gente parou com a ironia 😅\n\nMas é sério: irritação, pelo encravado e gasto toda semana com lâmina não precisam fazer parte da sua vida. A depilação a laser deixa os pelos mais finos e raros a cada sessão.\n\nMarca aquela amiga que ainda defende a lâmina 👇",
+    "caption": "Ok, chega de ironia. Irritação, pelo encravado e gasto toda semana com lâmina não precisam ser normais. A depilação a laser deixa os pelos mais finos e mais raros a cada sessão, e a sua pele agradece.\n\nMarque aquela amiga que ainda defende a lâmina.",
   },
   {
     "slug": "06-se-valorizar", "date": "2026-12-02T10:00:00", "tema": "Pra se valorizar",
@@ -81,7 +80,7 @@ POSTS = [
       ("Você é o motivo", "Não precisa de data especial. Você já é motivo suficiente."),
       ("A gente cuida de você", "Laser, pele e bem-estar com atendimento personalizado."),
     ],
-    "caption": "Esse é o seu lembrete de hoje: você merece se cuidar 💛\n\nNão é sobre padrão nem sobre agradar ninguém. É sobre você se olhar no espelho e gostar do que vê. Na RT, cada tratamento começa com uma conversa sobre o que você quer para você.\n\nSalva esse post para ler nos dias em que esquecer disso.",
+    "caption": "Um lembrete para hoje: você merece o mesmo cuidado que dedica a todo mundo. Não é sobre padrão nem sobre agradar ninguém. É sobre se olhar no espelho e gostar do que vê.\n\nSalve este post para os dias em que esquecer disso.",
   },
   {
     "slug": "07-verao-se-sentir-bem", "date": "2026-12-04T10:00:00", "tema": "Pra se sentir bem",
@@ -93,19 +92,19 @@ POSTS = [
       ("Clube, rio e piscina", "Calor de Goiás pede liberdade, na cidade ou na roça."),
       ("Quem começa antes...", "...aproveita mais. Agende sua avaliação e monte seu protocolo."),
     ],
-    "caption": "O calor de Goiás já chegou e o verão está logo aí ☀️\n\nImagina curtir o clube, o rio, a piscina ou a pescaria sem se preocupar com lâmina, cera ou pelo encravado? A depilação a laser te dá essa liberdade. Atendemos Morrinhos e toda a região, com horário marcado.",
+    "caption": "O calor de Goiás já chegou. Clube, rio, piscina, pescaria no fim de semana: dá para aproveitar tudo isso sem pensar em lâmina, cera ou pelo encravado. Quem começa o laser agora chega ao auge do verão bem mais tranquila.\n\nAtendemos Morrinhos e toda a região.",
   },
   {
     "slug": "08-como-funciona", "date": "2026-12-08T18:00:00", "tema": "Por que fazer com a gente",
     "cover": ("Como funciona", "a depilação a laser", "na RT?", "Passo a passo, sem mistério"),
     "slides": [
-      ("1. Chama no WhatsApp", "Conta o que você quer tratar e escolhe o melhor dia e horário."),
-      ("2. Avaliação", "Analisamos sua pele e seu tipo de pelo para indicar o protocolo ideal."),
-      ("3. Sessões", "Atendimento rápido e confortável, com parâmetros ajustados para você."),
-      ("4. Acompanhamento", "Você acompanha sua evolução e tira dúvidas direto com a gente."),
+      ("Chama no WhatsApp", "Conta o que você quer tratar e escolhe o melhor dia e horário."),
+      ("Avaliação", "Analisamos sua pele e seu tipo de pelo para indicar o protocolo ideal."),
+      ("Sessões", "Atendimento rápido e confortável, com parâmetros ajustados para você."),
+      ("Acompanhamento", "Você acompanha sua evolução e tira dúvidas direto com a gente."),
       ("Ficou alguma dúvida?", "No nosso site tem tudo explicado, inclusive as perguntas mais comuns."),
     ],
-    "caption": "Muita gente tem vontade de começar o laser, mas não sabe como funciona. Então aqui vai o passo a passo 👆\n\nÉ simples: você chama no WhatsApp, faz a avaliação e a gente monta o protocolo certo para a sua pele. No nosso site você encontra as respostas das dúvidas mais comuns, como se dói, quantas sessões e como se preparar.",
+    "caption": "Muita gente tem vontade de começar o laser, mas não sabe por onde. É simples: você chama no WhatsApp, faz a avaliação e a gente monta o protocolo certo para a sua pele. Depois, é acompanhar a evolução sessão a sessão.\n\nNo nosso site estão as respostas para as dúvidas mais comuns: se dói, quantas sessões e como se preparar.",
   },
   {
     "slug": "09-tipos-de-mulher", "date": "2026-12-10T10:00:00", "tema": "Engraçado",
@@ -117,7 +116,7 @@ POSTS = [
       ("A de última hora", "Depila no banho, correndo, 10 minutos antes de sair."),
       ("A sábia", "Já está no laser e nem lembra mais o que é lâmina."),
     ],
-    "caption": "Conta aqui nos comentários: qual delas é você? 😂👇\n\nA gente tem um palpite de qual você vai querer ser em 2027... 😉 Se quiser virar a número 5, é só chamar a gente no WhatsApp.",
+    "caption": "Conta aqui nos comentários: qual delas é você?\n\nA gente tem um palpite de qual você vai querer ser em 2027. Se quiser virar a número 5, é só chamar no WhatsApp.",
   },
   {
     "slug": "10-presente-pra-voce", "date": "2026-12-15T18:00:00", "tema": "Pra se sentir bem",
@@ -129,6 +128,6 @@ POSTS = [
       ("Agenda de dezembro", "Os horários de fim de ano costumam encher. Garanta o seu."),
       ("Presente pra quem você ama", "Mãe, irmã, amiga... cuidado também é um ótimo presente."),
     ],
-    "caption": "Você passou o ano inteiro cuidando de todo mundo. Que tal fechar 2026 cuidando de você? 🎁✨\n\nAgende sua avaliação e comece 2027 se sentindo bem na própria pele. E se quiser presentear alguém especial, chama a gente no WhatsApp que te ajudamos.",
+    "caption": "Você passou o ano cuidando de todo mundo. Que tal fechar 2026 cuidando de você? Agende sua avaliação e comece o ano se sentindo bem na própria pele.\n\nE se quiser presentear alguém especial, fale com a gente no WhatsApp.",
   },
 ]
