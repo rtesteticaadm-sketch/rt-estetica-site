@@ -272,3 +272,26 @@ p { margin: 0 0 1rem; }
   .js .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- profundidade 3D (leve) ---------- */
+.hero__photo { perspective: 1400px; }
+.depth { position: relative; transform-style: preserve-3d; transition: transform .7s var(--ease); will-change: transform; }
+.depth img { position: relative; transform: translateZ(0); }
+.depth__arc { position: absolute; inset: -20px 40px 46px -20px; border: 1.5px solid var(--gold); border-radius: 240px 240px 26px 26px; transform: translateZ(-70px); opacity: .55; pointer-events: none; }
+.depth figcaption { transform: translateZ(80px); }
+.depth__chip { position: absolute; right: -14px; top: 22%; background: var(--wine); color: #fff; padding: .7rem 1rem; border-radius: 12px; font-size: .82rem; line-height: 1.35; max-width: 190px; box-shadow: 0 18px 40px -18px rgba(110, 21, 39, .75); transform: translateZ(110px); }
+.depth__chip b { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.05rem; color: #F3D9A8; }
+.tilt { transform-style: preserve-3d; will-change: transform; }
+.tilt > * { transform: translateZ(18px); }
+.js .gallery .g.reveal { transform: perspective(900px) rotateX(14deg) translateY(36px); transform-origin: 50% 100%; }
+.js .gallery .g.reveal.is-in { transform: none; }
+@media (max-width: 860px) { .depth__chip { right: 10px; top: 14px; } .depth__arc { inset: -12px 18px 30px -12px; } }
+@media (prefers-reduced-motion: reduce) { .depth, .tilt { transform: none !important; } .js .gallery .g.reveal { transform: none; } }
+
+/* ---------- assistente: extras ---------- */
+.chat-nudge { position: fixed; right: 18px; bottom: 84px; z-index: 59; max-width: 260px; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 16px 16px 4px 16px; padding: .8rem 2.2rem .8rem 1rem; font-size: .88rem; line-height: 1.45; box-shadow: var(--shadow); animation: chatin .4s var(--ease); cursor: pointer; }
+.chat-nudge button { position: absolute; top: 4px; right: 6px; width: 28px; height: 28px; border-radius: 50%; color: var(--muted); font-size: 1.1rem; }
+.chat-nudge[hidden] { display: none; }
+.msg--bot b { color: var(--wine); }
+.chat__quick button.is-main { background: var(--wine); color: #fff; border-color: var(--wine); }
+@media (max-width: 560px) { .depth__chip { display: none; } }

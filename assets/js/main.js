@@ -44,6 +44,49 @@
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
   }
 
+
+  /* ---------- profundidade 3D ---------- */
+  const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = window.matchMedia("(pointer: fine)").matches;
+  const depth = document.querySelector("[data-depth]");
+  if (depth && !calm) {
+    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
+    const loop = () => {
+      cx += (tx - cx) * 0.08; cy += (ty - cy) * 0.08;
+      depth.style.transform = `rotateY(${cx.toFixed(2)}deg) rotateX(${cy.toFixed(2)}deg)`;
+      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.01 ? requestAnimationFrame(loop) : 0;
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(loop); };
+    if (fine) {
+      const hero = document.querySelector(".hero");
+      hero.addEventListener("pointermove", (e) => {
+        const r = depth.getBoundingClientRect();
+        tx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (r.width))) * 9;
+        ty = -Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / (r.height))) * 7;
+        kick();
+      });
+      hero.addEventListener("pointerleave", () => { tx = 0; ty = 0; kick(); });
+    } else {
+      const onS = () => {
+        const r = depth.getBoundingClientRect();
+        const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - innerHeight / 2) / innerHeight));
+        ty = p * 8; tx = -p * 4; kick();
+      };
+      addEventListener("scroll", onS, { passive: true }); onS();
+    }
+  }
+  if (fine && !calm) {
+    document.querySelectorAll(".svc, .reason").forEach((card) => {
+      card.classList.add("tilt");
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateY(${(x * 6).toFixed(2)}deg) rotateX(${(-y * 6).toFixed(2)}deg) translateY(-3px)`;
+      });
+      card.addEventListener("pointerleave", () => { card.style.transform = ""; });
+    });
+  }
+
   /* ---------- abas de serviços ---------- */
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const select = (tab) => {
