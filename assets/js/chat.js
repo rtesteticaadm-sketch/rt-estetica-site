@@ -182,7 +182,7 @@
     a.className = "msg__wa"; a.target = "_blank"; a.rel = "noopener";
     a.href = waLink(waMessage());
     a.textContent = label || "Continuar no WhatsApp →";
-    a.addEventListener("click", () => track("whatsapp_click", { origem: "assistente" }));
+    a.addEventListener("click", () => track("whatsapp_click", { origem: ctx.periodo ? "assistente-agendamento" : "assistente", servico: [...ctx.interesses].join(", ") }));
     bubble.appendChild(document.createElement("br"));
     bubble.appendChild(a);
     if (!aberto()) {

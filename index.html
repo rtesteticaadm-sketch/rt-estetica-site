@@ -107,15 +107,26 @@
           </ul>
         </div>
         <figure class="hero__photo reveal">
-          <div class="depth" data-depth>
-          <span class="depth__arc" aria-hidden="true"></span>
-          <img src="assets/img/fotos/recepcao-1400.webp" srcset="assets/img/fotos/recepcao-720.webp 720w, assets/img/fotos/recepcao-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 46vw" alt="Recepção da RT Estética Avançada com o painel da marca, mesa de madeira rústica e plantas" width="1400" height="1614" fetchpriority="high">
-          <figcaption>Nossa recepção, no Jardim Santa Fé</figcaption>
-          <span class="depth__chip" aria-hidden="true"><b>Avaliação</b> antes de cada protocolo</span>
+          <div class="deck" data-depth>
+            <img class="deck__card deck__card--3" src="assets/img/fotos/sala-plantas-720.webp" alt="" aria-hidden="true" width="720" height="675" loading="lazy">
+            <img class="deck__card deck__card--2" src="assets/img/fotos/laser-720.webp" alt="" aria-hidden="true" width="720" height="645" loading="lazy">
+            <img class="deck__card deck__card--1" src="assets/img/fotos/recepcao-1400.webp" srcset="assets/img/fotos/recepcao-720.webp 720w, assets/img/fotos/recepcao-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 46vw" alt="Recepção da RT Estética Avançada com o painel da marca, mesa de madeira rústica e plantas" width="1400" height="1614" fetchpriority="high">
+            <div class="seal" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><defs><path id="sealPath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+                <text><textPath href="#sealPath">avaliação · horário marcado · morrinhos · go · avaliação · horário marcado ·</textPath></text></svg>
+              <img src="assets/img/logo.webp" alt="" width="74" height="74">
+            </div>
+            <figcaption>Nossa recepção, no Jardim Santa Fé</figcaption>
           </div>
         </figure>
       </div>
     </section>
+
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>Depilação a laser</span><span>Limpeza de pele</span><span>Toxina botulínica</span><span>Harmonização facial</span><span>Estrias</span><span>Enzimas</span><span>Drenagem linfática</span><span>Massagens</span><span>Sobrancelhas</span><span>Cílios</span>
+      </div>
+    </div>
 
     <!-- ============ SERVIÇOS ============ -->
     <section class="section" id="servicos">
@@ -215,12 +226,15 @@
           </div>
           <p class="head__sub reveal">Salas reservadas, climatizadas e preparadas com cuidado. Fica no Jardim Santa Fé, em Morrinhos.</p>
         </header>
-        <div class="gallery">
-          <figure class="g g--a reveal"><img src="assets/img/fotos/sala-plantas-720.webp" srcset="assets/img/fotos/sala-plantas-720.webp 720w, assets/img/fotos/sala-plantas-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala de atendimento com maca, cortinas claras e aparador de madeira com plantas" loading="lazy" width="1400" height="1313"></figure>
-          <figure class="g g--b reveal"><img src="assets/img/fotos/laser-maca-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Sala de depilação a laser da RT" loading="lazy" width="720" height="590"></figure>
-          <figure class="g g--c reveal"><img src="assets/img/fotos/detalhe-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Detalhe da recepção com esculturas brancas e plantas" loading="lazy" width="720" height="541"></figure>
-          <figure class="g g--d reveal"><img src="assets/img/fotos/entrada-720.webp" srcset="assets/img/fotos/entrada-720.webp 720w, assets/img/fotos/entrada-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 25vw" alt="Entrada da clínica com o painel da marca ao lado da porta" loading="lazy" width="1380" height="1440"></figure>
-          <figure class="g g--e reveal"><img src="assets/img/fotos/sala-cortina-720.webp" srcset="assets/img/fotos/sala-cortina-720.webp 720w, assets/img/fotos/sala-cortina-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala do laser com maca e cortinas" loading="lazy" width="1400" height="1175"></figure>
+        <div class="tour" data-tour>
+          <div class="tour__track" tabindex="0" aria-label="Fotos do nosso espaço. Arraste para o lado.">
+          <figure class="tour__item"><img src="assets/img/fotos/sala-plantas-720.webp" srcset="assets/img/fotos/sala-plantas-720.webp 720w, assets/img/fotos/sala-plantas-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala de atendimento com maca, cortinas claras e aparador de madeira com plantas" loading="lazy" width="1400" height="1313"></figure>
+          <figure class="tour__item"><img src="assets/img/fotos/laser-maca-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Sala de depilação a laser da RT" loading="lazy" width="720" height="590"></figure>
+          <figure class="tour__item"><img src="assets/img/fotos/detalhe-720.webp" sizes="(max-width: 860px) 100vw, 25vw" alt="Detalhe da recepção com esculturas brancas e plantas" loading="lazy" width="720" height="541"></figure>
+          <figure class="tour__item"><img src="assets/img/fotos/entrada-720.webp" srcset="assets/img/fotos/entrada-720.webp 720w, assets/img/fotos/entrada-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 25vw" alt="Entrada da clínica com o painel da marca ao lado da porta" loading="lazy" width="1380" height="1440"></figure>
+          <figure class="tour__item"><img src="assets/img/fotos/sala-cortina-720.webp" srcset="assets/img/fotos/sala-cortina-720.webp 720w, assets/img/fotos/sala-cortina-1400.webp 1400w" sizes="(max-width: 860px) 100vw, 50vw" alt="Sala do laser com maca e cortinas" loading="lazy" width="1400" height="1175"></figure>
+          </div>
+          <div class="tour__nav"><button class="tour__btn" data-tour-prev aria-label="Foto anterior">←</button><span class="tour__count"><b data-tour-i>1</b> / 5</span><button class="tour__btn" data-tour-next aria-label="Próxima foto">→</button></div>
         </div>
       </div>
     </section>
@@ -232,6 +246,12 @@
           <p class="kicker reveal">Por que fazer com a gente</p>
           <h2 class="reveal">O que você encontra <em>na RT.</em></h2>
         </header>
+        <ul class="stats">
+          <li class="reveal"><b data-count="14">14</b><span>tratamentos num só lugar</span></li>
+          <li class="reveal"><b data-count="11">11</b><span>áreas de depilação a laser</span></li>
+          <li class="reveal"><b><span data-count="9">9</span>h–<span data-count="19">19</span>h</b><span>de segunda a sexta</span></li>
+          <li class="reveal"><b data-count="60" data-suffix=" km">60 km</b><span>de Morrinhos: cidade, região e zona rural</span></li>
+        </ul>
         <div class="reasons">
           <div class="reason reveal"><span>01</span><h3>Avaliação antes de tudo</h3><p>Nada de pacote pronto. Primeiro entendemos sua pele, sua rotina e o que você quer.</p></div>
           <div class="reason reveal"><span>02</span><h3>Horário marcado</h3><p>Você chega na sua hora e é atendida sem pressa, com privacidade.</p></div>
@@ -313,6 +333,12 @@
     <p class="footer__legal">© <span id="ano"></span> RT Estética Avançada · Morrinhos - GO. Procedimentos realizados mediante avaliação. Resultados podem variar de pessoa para pessoa.</p>
   </footer>
 
+  <div class="dock" hidden>
+    <a class="btn btn--wine" data-wa="Olá! Vim pelo site e quero agendar minha avaliação." data-wa-origem="barra-celular" href="#">Agendar avaliação</a>
+    <button class="dock__chat" data-open-chat aria-label="Tirar dúvidas com a assistente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></button>
+  </div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
   <!-- ============ ASSISTENTE ============ -->
   <button class="chat-fab" aria-label="Abrir conversa com a assistente da RT" aria-expanded="false" aria-controls="chat">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
@@ -343,5 +369,6 @@
   <script src="assets/js/tracking.js"></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/chat.js" defer></script>
+  <script src="assets/js/fx.js" defer></script>
 </body>
 </html>

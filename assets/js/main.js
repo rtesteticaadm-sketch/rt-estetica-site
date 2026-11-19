@@ -2,7 +2,17 @@
 (() => {
   const CFG = window.RT_CONFIG || {};
   const WA = CFG.whatsapp || "5564992724619";
-  const waLink = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  /* origem da visita: anúncio da Meta/Google ou orgânico (para a equipe etiquetar no WhatsApp) */
+  const q = new URLSearchParams(location.search);
+  let origemVisita = "";
+  try {
+    if (q.get("fbclid") || /meta|facebook|instagram/i.test(q.get("utm_source") || "")) sessionStorage.setItem("rt_origem", "anuncio");
+    else if (q.get("gclid") || /google/i.test(q.get("utm_source") || "")) sessionStorage.setItem("rt_origem", "google");
+    origemVisita = sessionStorage.getItem("rt_origem") || "";
+  } catch (e) {}
+  window.RT_origem = origemVisita;
+  const marcar = (msg) => origemVisita === "anuncio" ? msg.replace("Vim pelo site", "Vi o anúncio da RT") : msg;
+  const waLink = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(marcar(msg))}`;
   window.RT_waLink = waLink;
   const track = (name, params) => { if (window.RT_track) window.RT_track(name, params || {}); };
 
@@ -123,7 +133,7 @@
     updateAreas();
   }));
   cta.target = "_blank"; cta.rel = "noopener";
-  cta.addEventListener("click", () => track("whatsapp_click", { origem: "laser-areas" }));
+  cta.addEventListener("click", () => track("whatsapp_click", { origem: "laser-areas", servico: "Depilação a laser: " + areas.filter((a) => a.getAttribute("aria-pressed") === "true").map((a) => a.textContent.trim()).join(", ") }));
   updateAreas();
 
   /* ---------- dúvidas: uma aberta por vez ---------- */

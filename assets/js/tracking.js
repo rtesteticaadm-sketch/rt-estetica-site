@@ -29,6 +29,7 @@
   }
 
   var metaLoaded = false;
+  var pending = []; // eventos feitos antes da resposta ao aviso de cookies
   function loadMeta() {
     if (!hasMeta || metaLoaded) return;
     metaLoaded = true;
@@ -39,6 +40,23 @@
     /* eslint-enable */
     window.fbq("init", C.metaPixel);
     window.fbq("track", "PageView");
+    pending.splice(0).forEach(function (ev) { sendMeta(ev[0], ev[1]); });
+  }
+
+  // Funil para o Meta otimizar: ViewContent (interesse) → Contact (clicou no WhatsApp) → Lead (agendamento montado)
+  var ALTA_INTENCAO = { "assistente-agendamento": 1, "laser-areas": 1 };
+  function sendMeta(name, p) {
+    var base = { content_category: "estetica", origem_visita: window.RT_origem || "organico" };
+    if (name === "whatsapp_click") {
+      window.fbq("track", "Contact", Object.assign({}, base, { content_name: p.servico || p.origem || "geral", origem: p.origem || "" }));
+      if (ALTA_INTENCAO[p.origem]) window.fbq("track", "Lead", Object.assign({}, base, { content_name: p.servico || p.origem }));
+    } else if (name === "lead_completo") {
+      window.fbq("trackCustom", "AgendamentoMontado", Object.assign({}, base, { content_name: p.servico || "" }));
+    } else if (name === "servico_interesse") {
+      window.fbq("track", "ViewContent", Object.assign({}, base, { content_name: p.servico || "" }));
+    } else if (name === "chat_open") {
+      window.fbq("trackCustom", "ChatAberto", base);
+    }
   }
 
   function grant() {
@@ -62,10 +80,9 @@
         if (C.googleAds && C.googleAdsLeadLabel) gtag("event", "conversion", { send_to: C.googleAds + "/" + C.googleAdsLeadLabel });
       }
     }
-    if (metaLoaded && window.fbq) {
-      if (name === "whatsapp_click") window.fbq("track", "Contact", { content_name: params.origem || "" });
-      else if (name === "chat_open") window.fbq("trackCustom", "ChatAberto");
-      else if (name === "servico_interesse") window.fbq("track", "ViewContent", { content_name: params.servico || "" });
+    if (hasMeta) {
+      if (metaLoaded && window.fbq) sendMeta(name, params);
+      else if (store.get() !== "denied" && pending.length < 20) pending.push([name, params]);
     }
   };
 
