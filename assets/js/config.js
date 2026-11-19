@@ -15,5 +15,5 @@ window.RT_CONFIG = {
   googleAdsLeadLabel: "",
 
   // Pixel da Meta (Facebook/Instagram) — só números
-  metaPixel: "876972272165250"
+  metaPixel: "1608544770584121"
 };
